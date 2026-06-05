@@ -10,7 +10,7 @@ function Chat() {
   const { user } = useAuth();
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io("https://talksy-zm1t.onrender.com");
     newSocket.emit("addUser", user.id);
     setSocket(newSocket);
 
